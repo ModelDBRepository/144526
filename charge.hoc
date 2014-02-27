@@ -8,8 +8,8 @@ proc ch() { local i,j,fac, pos, chAll,chDe,chAp,chSo,chCol,chAis,chMy,chNo, chAl
 	chAllA=0
 	ff=new File()	ff.wopen("exportOverlAll.tmp")	forall {
 		for j=1,nseg {
-			ff.printf("%e\n",overl_charge(j/nseg))
-			pos=0.5/nseg+(j-1)/nseg			chAll = chAll + area(pos)*na_ch_charge(pos)	//mA/cm^2 * um^2
+			ff.printf("%e\n",overl_charge_(j/nseg))
+			pos=0.5/nseg+(j-1)/nseg			chAll = chAll + area(pos)*na_ch_charge_(pos)	//mA/cm^2 * um^2
 			chAllA = chAllA + area(pos)
 		}
 	}	ff.close()
@@ -18,8 +18,8 @@ proc ch() { local i,j,fac, pos, chAll,chDe,chAp,chSo,chCol,chAis,chMy,chNo, chAl
 	chDe=0
 	chDeA=0
 	ff=new File()	ff.wopen("exportOverlDend.tmp")	for i=0,dendNum-1 {		dend[i] {			for j=1,nseg {
-				ff.printf("%e\n",overl_charge(j/nseg))
-				pos=0.5/nseg+(j-1)/nseg				chDe = chDe + area(pos)*na_ch_charge(pos)	//mA/cm^2 * um^2
+				ff.printf("%e\n",overl_charge_(j/nseg))
+				pos=0.5/nseg+(j-1)/nseg				chDe = chDe + area(pos)*na_ch_charge_(pos)	//mA/cm^2 * um^2
 				chDeA = chDeA + area(pos)
 			}
 		}
@@ -31,8 +31,8 @@ proc ch() { local i,j,fac, pos, chAll,chDe,chAp,chSo,chCol,chAis,chMy,chNo, chAl
 	chApA=0
 	ff=new File()	ff.wopen("exportOverlApic.tmp")	for i=0,apicNum-1 {		apic[i] {
 			for j=1,nseg {
-				ff.printf("%e\n",overl_charge(j/nseg))
-				pos=0.5/nseg+(j-1)/nseg				chAp = chAp + area(pos)*na_ch_charge(pos)	//mA/cm^2 * um^2
+				ff.printf("%e\n",overl_charge_(j/nseg))
+				pos=0.5/nseg+(j-1)/nseg				chAp = chAp + area(pos)*na_ch_charge_(pos)	//mA/cm^2 * um^2
 				chApA = chApA + area(pos)	
 			}
 		}
@@ -43,8 +43,8 @@ proc ch() { local i,j,fac, pos, chAll,chDe,chAp,chSo,chCol,chAis,chMy,chNo, chAl
 	chSoA=0
 	ff=new File()	ff.wopen("exportOverlSoma.tmp")	soma {
 		for j=1,nseg {
-			ff.printf("%e\n",overl_charge(j/nseg))
-			pos=0.5/nseg+(j-1)/nseg			chSo = chSo + area(pos)*na_ch_charge(pos)	//mA/cm^2 * um^2
+			ff.printf("%e\n",overl_charge_(j/nseg))
+			pos=0.5/nseg+(j-1)/nseg			chSo = chSo + area(pos)*na_ch_charge_(pos)	//mA/cm^2 * um^2
 			chSoA = chSoA + area(pos)
 		}
 	}
@@ -56,8 +56,8 @@ proc ch() { local i,j,fac, pos, chAll,chDe,chAp,chSo,chCol,chAis,chMy,chNo, chAl
 	ff=new File()	ff.wopen("exportOverlAxon.tmp")	for i=1,axonNum-1 {					//axon[0] is AIS
 		axon[i] {
 			for j=1,nseg {
-				ff.printf("%e\n",overl_charge(j/nseg))
-				pos=0.5/nseg+(j-1)/nseg				chCol = chCol + area(pos)*na_ch_charge(pos)	//mA/cm^2 * um^2
+				ff.printf("%e\n",overl_charge_(j/nseg))
+				pos=0.5/nseg+(j-1)/nseg				chCol = chCol + area(pos)*na_ch_charge_(pos)	//mA/cm^2 * um^2
 				chColA = chColA + area(pos)
 			}
 		}
@@ -69,8 +69,8 @@ proc ch() { local i,j,fac, pos, chAll,chDe,chAp,chSo,chCol,chAis,chMy,chNo, chAl
 	chAisA=0
 	ff=new File()	ff.wopen("exportOverlAxon.tmp")	axon[0] {
 		for j=1,nseg {
-			ff.printf("%e\n",overl_charge(j/nseg))
-			pos=0.5/nseg+(j-1)/nseg			chAis = chAis + area(pos)*na_ch_charge(pos)	//mA/cm^2 * um^2
+			ff.printf("%e\n",overl_charge_(j/nseg))
+			pos=0.5/nseg+(j-1)/nseg			chAis = chAis + area(pos)*na_ch_charge_(pos)	//mA/cm^2 * um^2
 			chAisA = chAisA + area(pos)
 		}
 	}
@@ -84,8 +84,8 @@ proc ch() { local i,j,fac, pos, chAll,chDe,chAp,chSo,chCol,chAis,chMy,chNo, chAl
 	ff=new File()	ff.wopen("exportOverlMyelin.tmp")	for i=0,myNum-1 {
 		my[i] {
 			for j=1,nseg {
-				ff.printf("%e\n",overl_charge(j/nseg))
-				pos=0.5/nseg+(j-1)/nseg				chMy = chMy + area(pos)*na_ch_charge(pos)	//mA/cm^2 * um^2
+				ff.printf("%e\n",overl_charge_(j/nseg))
+				pos=0.5/nseg+(j-1)/nseg				chMy = chMy + area(pos)*na_ch_charge_(pos)	//mA/cm^2 * um^2
 				chMyA = chMyA + area(pos)
 			}
 		}
@@ -96,8 +96,8 @@ proc ch() { local i,j,fac, pos, chAll,chDe,chAp,chSo,chCol,chAis,chMy,chNo, chAl
 	chNoA=0
 	ff=new File()	ff.wopen("exportOverlNode.tmp")	for i=0,nodeNum-1 {		node[i]  {
 			for j=1,nseg {
-				ff.printf("%e\n",overl_charge(j/nseg))
-				pos=0.5/nseg+(j-1)/nseg				chNo = chNo + area(pos)*na_ch_charge(pos)	//mA/cm^2 * um^2
+				ff.printf("%e\n",overl_charge_(j/nseg))
+				pos=0.5/nseg+(j-1)/nseg				chNo = chNo + area(pos)*na_ch_charge_(pos)	//mA/cm^2 * um^2
 				chNoA = chNoA + area(pos)
 			}
 		}
@@ -116,7 +116,7 @@ proc ch() { local i,j,fac, pos, chAll,chDe,chAp,chSo,chCol,chAis,chMy,chNo, chAl
 
 	
 	printf("--------------------------------------------------------------------------------------\n")
-	printf("The Na influx was analyzed from %f to %f ms\n",tStart_charge,tEnd_charge)
+	printf("The Na influx was analyzed from %f to %f ms\n",tStart_charge_,tEnd_charge_)
 	printf("Required ATP molecules to pump Na ions out:\n")
 	printf("Total: %e\n",fac*chAll)
 	printf("Soma: %e\n",fac*chSo)

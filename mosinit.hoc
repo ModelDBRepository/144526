@@ -57,7 +57,7 @@ for (i=i3+1; i<=ncmap-1; i=i+1) {
 	sp.colormap(i,255,255*(1-f),0)
 } 
 
-sp.variable("overl_charge")
+sp.variable("overl_charge_")
 sp.exec_menu("Shape Plot")
 //sp.view(-608.167, -740.999, 1548.33, 1812, 509, 84, 276, 323)
 sp.scale(vlow,vhigh)

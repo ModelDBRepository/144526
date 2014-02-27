@@ -1,7 +1,7 @@
 TITLE calculates Na+/K+ charge overlap and excess Na+ influx COMMENT	Hallermann, de Kock, Stuart and Kole, Nature Neuroscience, 2012
 	doi:10.1038/nn.3132ENDCOMMENT
 NEURON {
-        SUFFIX charge     
+        SUFFIX charge_     : changed "charge" to "charge_" because of conflicts with NEURON's "charge"
 	USEION na READ ina
 	USEION k READ ik
         RANGE vmax, vmin, tmax, tmin
@@ -98,4 +98,4 @@ VERBATIM
 	}
 ENDVERBATIM
 }
-
+

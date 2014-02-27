@@ -59,3 +59,9 @@ m.kole@nin.knaw.nl
 
 
 June 12th 2012, Stefan Hallermann
+
+20140226 ModelDB Administrator: To prevent collision with NEURON's
+"charge" the "charge" mechanism has been changed to "charge_" with
+changes in the hoc code.  The charge in names of files was left
+unchanged.
+

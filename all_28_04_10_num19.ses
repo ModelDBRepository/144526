@@ -58,14 +58,14 @@ xpanel(11,83)
 }
 {
 xpanel("charge (Globals)", 0)
-tStart_charge = 517
-xvalue("tStart_charge","tStart_charge", 1,"", 0, 0 )
-tEnd_charge = 535
-xvalue("tEnd_charge","tEnd_charge", 1,"", 0, 0 )
-peak_tolerance_charge = 0.01
-xvalue("peak_tolerance_charge","peak_tolerance_charge", 1,"", 0, 0 )
-peak_lowest_charge = -60
-xvalue("peak_lowest_charge","peak_lowest_charge", 1,"", 0, 0 )
+tStart_charge_ = 517
+xvalue("tStart_charge_","tStart_charge_", 1,"", 0, 0 )
+tEnd_charge_ = 535
+xvalue("tEnd_charge_","tEnd_charge_", 1,"", 0, 0 )
+peak_tolerance_charge_ = 0.01
+xvalue("peak_tolerance_charge_","peak_tolerance_charge_", 1,"", 0, 0 )
+peak_lowest_charge_ = -60
+xvalue("peak_lowest_charge_","peak_lowest_charge_", 1,"", 0, 0 )
 xpanel(813,34)
 }
 {
@@ -76,7 +76,7 @@ scene_vector_[3] = save_window_
 flush_list.append(save_window_)
 save_window_.save_name("flush_list.")
 objectvar rvp_
-rvp_ = new RangeVarPlot("na_ch_excess_ratio_charge")
+rvp_ = new RangeVarPlot("na_ch_excess_ratio_charge_")
 apic[56] rvp_.begin(1)
 my[9] rvp_.end(0)
 rvp_.origin(17.5097)
@@ -90,7 +90,7 @@ scene_vector_[4] = save_window_
 flush_list.append(save_window_)
 save_window_.save_name("flush_list.")
 objectvar rvp_
-rvp_ = new RangeVarPlot("overl_charge")
+rvp_ = new RangeVarPlot("overl_charge_")
 apic[56] rvp_.begin(1)
 my[9] rvp_.end(0)
 rvp_.origin(17.5097)
@@ -218,7 +218,7 @@ ocbox_.intercept(1)
 {
 save_window_ = new PlotShape(0)
 save_window_.size(-679.903,1036.8,-954.47,1350.14)
-save_window_.variable("overl_charge")
+save_window_.variable("overl_charge_")
 scene_vector_[17] = save_window_
 {save_window_.view(-679.903, -954.47, 1716.7, 2304.61, 500, 20, 292, 392)}
 fast_flush_list.append(save_window_)
@@ -238,7 +238,7 @@ ocbox_.intercept(1)
 {
 save_window_ = new PlotShape(0)
 save_window_.size(-679.903,1036.79,-954.47,1350.14)
-save_window_.variable("overl_charge")
+save_window_.variable("overl_charge_")
 scene_vector_[18] = save_window_
 {save_window_.view(-679.903, -954.47, 1716.7, 2304.61, 500, 20, 292, 392)}
 fast_flush_list.append(save_window_)
