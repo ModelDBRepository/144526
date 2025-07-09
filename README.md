@@ -48,9 +48,12 @@ Axon Initial Segment: 5.531797e+04
 Axon collaterals: 3.932075e+03  
 Myelin: 2.081271e+02  
 Node: 3.517895e+04  
+
 -------------------------------------------------------------------------  
+
 Total area (um^2): 7.091197e+04  
 Soma area (um^2): 2.079316e+03  
+
 -------------------------------------------------------------------------
 
 For questions please contact s.hallermann@eni-g.de or  
@@ -58,11 +61,11 @@ m.kole@nin.knaw.nl
 
 June 12th 2012, Stefan Hallermann
 
+## Changelog
+
 20140226 ModelDB Administrator: To prevent collision with NEURON's  
 "charge" the "charge" mechanism has been changed to "charge_" with  
 changes in the hoc code.  The charge in names of files was left  
 unchanged.
 
----
-
-2025-07-09: Converted README to Markdown.
+20250709 Converted README to Markdown.
