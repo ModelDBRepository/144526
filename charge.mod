@@ -62,40 +62,37 @@ INITIAL {
 
 
 BREAKPOINT {
-VERBATIM
       if (t > tStart) {
-		if (t < tEnd) {
-			if (v < vmin) {
-        		        vmin = v;
-                		tmin = t;
-		        }
-		        if (v > vmax) {
-        		        vmax = v;
-	                	tmax = t;
-		        }
- 			na_ch = na_ch + ina;
-			na_ch_overl_tmp = ina;				
-			if (-ik > ina) {
-                		na_ch_overl_tmp = -ik;
-		        }
-			na_ch_overl = na_ch_overl + na_ch_overl_tmp;
-			if (na_ch !=  0) {	//na_ch is negative
-                		overl = (na_ch - na_ch_overl) / na_ch;
-			}
-			if ( (v < vmax - peak_tolerance) && (v > peak_lowest) && (peak_reached == 0) ) {
-				peak_reached = 1;
-				peak_time = t;
-			}
-			if (peak_reached == 0) {
-				na_ch_before_peak = na_ch_before_peak + ina;			
-			} else {
-				na_ch_after_peak = na_ch_after_peak + ina;
-			}
-			if (na_ch_before_peak != 0) {
-				na_ch_excess_ratio = (na_ch_before_peak + na_ch_after_peak) / na_ch_before_peak;
-			}
-		}
-	}
-ENDVERBATIM
+        if (t < tEnd) {
+            if (v < vmin) {
+                 vmin = v
+                 tmin = t
+            }
+            if (v > vmax) {
+                vmax = v
+                tmax = t
+            }
+            na_ch = na_ch + ina
+            na_ch_overl_tmp = ina
+            if (-ik > ina) {
+                na_ch_overl_tmp = -ik
+            }
+            na_ch_overl = na_ch_overl + na_ch_overl_tmp
+            if (na_ch !=  0) {
+                overl = (na_ch - na_ch_overl) / na_ch
+            }
+            if ( (v < vmax - peak_tolerance) && (v > peak_lowest) && (peak_reached == 0) ) {
+                peak_reached = 1
+                peak_time = t
+            }
+            if (peak_reached == 0) {
+                na_ch_before_peak = na_ch_before_peak + ina
+            } else {
+                na_ch_after_peak = na_ch_after_peak + ina
+            }
+            if (na_ch_before_peak != 0) {
+                na_ch_excess_ratio = (na_ch_before_peak + na_ch_after_peak) / na_ch_before_peak
+            }
+        }
+    }
 }
-
